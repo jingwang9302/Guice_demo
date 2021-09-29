@@ -16,4 +16,14 @@ public class SquareRequest {
     public void makeRequest(){
         drawShape.draw();
     }
+
+
+//    Method injection
+//    @Inject
+//    public void setDrawShape(DrawShape drawShape) {
+//        this.drawShape = drawShape;
+//    }
+
+
+
 }

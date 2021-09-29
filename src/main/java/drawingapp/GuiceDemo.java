@@ -18,12 +18,19 @@ public class GuiceDemo {
 
 //            SquareRequest request = new SquareRequest(d);
             SquareRequest request = injector.getInstance(SquareRequest.class);
+            SquareRequest request2 = injector.getInstance(SquareRequest.class);
 
+            // singleton example:
+            // request.makeRequest() == request2.makeRequest(), because DrawShape was defined as singleton,
+            // but request != request2
+            // in order to make request == request2, we need to add singleton scope to SquareRequest class in AppModule
             request.makeRequest();
+            request2.makeRequest();
         }
     }
     public static void main(String[] args) {
         sendRequest(SQUARE_REQ);
+
 
     }
 }
